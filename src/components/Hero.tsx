@@ -1,60 +1,126 @@
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left Content */}
-        <div className="text-white space-y-6 animate-fade-in">
-          <div className="space-y-2">
-            <p className="text-lg font-medium text-white/90">Hello, I'm</p>
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Sindhu Tuppudu
-            </h1>
-            <p className="text-xl lg:text-2xl text-white/80 font-medium">
-              Aspiring AI Developer & Frontend Enthusiast
-            </p>
+        <div className="text-white space-y-8 animate-fade-in order-2 lg:order-1">
+          <div className="space-y-4">
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+              <p className="text-sm font-medium text-white/90">Available for opportunities</p>
+            </div>
+            
+            <div className="space-y-3">
+              <p className="text-lg font-medium text-white/80 tracking-wide">Hello, I'm</p>
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
+                Sindhu Tuppudu
+              </h1>
+              <div className="space-y-2">
+                <p className="text-2xl lg:text-3xl font-semibold text-orange-300">
+                  AI Developer
+                </p>
+                <p className="text-xl lg:text-2xl text-white/70 font-medium">
+                  & Frontend Enthusiast
+                </p>
+              </div>
+            </div>
           </div>
           
-          <p className="text-lg text-white/90 leading-relaxed max-w-lg">
-            Computer Science student passionate about AI and programming, dedicated to continuous learning and building innovative solutions.
+          <p className="text-lg text-white/90 leading-relaxed max-w-lg font-light">
+            Computer Science student passionate about <span className="text-orange-300 font-medium">artificial intelligence</span> and 
+            <span className="text-purple-300 font-medium"> modern web development</span>, dedicated to continuous learning and 
+            building innovative solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <button
               onClick={() => {
                 const element = document.getElementById("projects");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-orange-500/25 flex items-center justify-center gap-2"
             >
-              View Projects
+              <span>View My Work</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </button>
             <button
               onClick={() => {
                 const element = document.getElementById("contact");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+              className="group border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-2"
             >
-              Get In Touch
+              <span>Get In Touch</span>
+              <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
             </button>
+          </div>
+
+          {/* Social proof or stats */}
+          <div className="flex items-center gap-8 pt-8 text-white/70">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">3+</div>
+              <div className="text-sm">Projects</div>
+            </div>
+            <div className="w-px h-12 bg-white/20"></div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">5+</div>
+              <div className="text-sm">Technologies</div>
+            </div>
+            <div className="w-px h-12 bg-white/20"></div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">100%</div>
+              <div className="text-sm">Dedicated</div>
+            </div>
           </div>
         </div>
         
         {/* Right Content - Profile Image */}
-        <div className="flex justify-center lg:justify-end animate-fade-in">
+        <div className="flex justify-center lg:justify-end animate-fade-in order-1 lg:order-2">
           <div className="relative">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-              <img
-                src="/lovable-uploads/431279b2-3991-4ee6-9c60-4e66f12daf8b.png"
-                alt="Sindhu Tuppudu"
-                className="w-full h-full object-cover"
-              />
+            {/* Main image container */}
+            <div className="relative w-80 h-80 lg:w-[450px] lg:h-[450px]">
+              {/* Gradient border */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 via-purple-500 to-blue-500 rounded-full p-1">
+                <div className="w-full h-full bg-gradient-to-br from-purple-600 via-blue-500 to-orange-400 rounded-full p-2">
+                  <div className="w-full h-full rounded-full overflow-hidden">
+                    <img
+                      src="/lovable-uploads/431279b2-3991-4ee6-9c60-4e66f12daf8b.png"
+                      alt="Sindhu Tuppudu"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-orange-400 to-pink-500 rounded-2xl rotate-12 opacity-80 animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/4 -left-12 w-8 h-8 bg-white rounded-full opacity-40 animate-ping" style={{animationDelay: '2s'}}></div>
+              <div className="absolute bottom-1/4 -right-10 w-6 h-6 bg-orange-300 rounded-full opacity-50 animate-pulse" style={{animationDelay: '0.5s'}}></div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-400 rounded-full opacity-20"></div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-white rounded-full opacity-30"></div>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-sm font-medium">Scroll down</span>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>
