@@ -66,24 +66,6 @@ const Hero = () => {
               </svg>
             </button>
           </div>
-
-          {/* Social proof or stats */}
-          <div className="flex items-center gap-8 pt-8 text-white/70">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">3+</div>
-              <div className="text-sm">Projects</div>
-            </div>
-            <div className="w-px h-12 bg-white/20"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">5+</div>
-              <div className="text-sm">Technologies</div>
-            </div>
-            <div className="w-px h-12 bg-white/20"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-sm">Dedicated</div>
-            </div>
-          </div>
         </div>
         
         {/* Right Content - Profile Image */}
@@ -98,7 +80,7 @@ const Hero = () => {
                     <img
                       src="/lovable-uploads/431279b2-3991-4ee6-9c60-4e66f12daf8b.png"
                       alt="Sindhu Tuppudu"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
