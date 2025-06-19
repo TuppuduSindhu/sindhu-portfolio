@@ -54,19 +54,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Contact Me</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Contact Me</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Let's connect and discuss opportunities
           </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-white mb-8">Get In Touch</h3>
+          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -74,12 +74,12 @@ const Contact = () => {
                   <Mail className="text-white" size={20} />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Email</p>
-                  <a href="mailto:tuppudusindhu@gmail.com" className="text-white/80 hover:text-white transition-colors">
+                  <p className="text-gray-900 font-medium">Email</p>
+                  <a href="mailto:tuppudusindhu@gmail.com" className="text-gray-600 hover:text-orange-500 transition-colors">
                     tuppudusindhu@gmail.com
                   </a>
                   <br />
-                  <a href="mailto:2203031241341@paruluniversity.ac.in" className="text-white/80 hover:text-white transition-colors">
+                  <a href="mailto:2203031241341@paruluniversity.ac.in" className="text-gray-600 hover:text-orange-500 transition-colors">
                     2203031241341@paruluniversity.ac.in
                   </a>
                 </div>
@@ -90,9 +90,9 @@ const Contact = () => {
                   <Phone className="text-white" size={20} />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Phone</p>
-                  <p className="text-white/80">+91-6301601086</p>
-                  <p className="text-white/80">+91-9490341484</p>
+                  <p className="text-gray-900 font-medium">Phone</p>
+                  <p className="text-gray-600">+91-6301601086</p>
+                  <p className="text-gray-600">+91-9490341484</p>
                 </div>
               </div>
               
@@ -101,12 +101,12 @@ const Contact = () => {
                   <Github className="text-white" size={20} />
                 </div>
                 <div>
-                  <p className="text-white font-medium">GitHub</p>
+                  <p className="text-gray-900 font-medium">GitHub</p>
                   <a 
                     href="https://github.com/tuppudusindhu" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-white/80 hover:text-white transition-colors inline-flex items-center gap-1"
+                    className="text-gray-600 hover:text-orange-500 transition-colors inline-flex items-center gap-1"
                   >
                     View Profile <ExternalLink size={14} />
                   </a>
@@ -116,12 +116,12 @@ const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-white mb-8">Send Message</h3>
+          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Send Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-gray-900 font-medium mb-2">
                   Name
                 </label>
                 <input
@@ -132,13 +132,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-gray-900 font-medium mb-2">
                   Email
                 </label>
                 <input
@@ -149,13 +149,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="your.email@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-gray-900 font-medium mb-2">
                   Message
                 </label>
                 <textarea
@@ -166,7 +166,7 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none disabled:opacity-50"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="Your message..."
                 />
               </div>

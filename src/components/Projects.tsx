@@ -27,11 +27,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Projects</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Projects</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             A showcase of my recent work and creative solutions
           </p>
         </div>
@@ -40,7 +40,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group border border-gray-200"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -52,14 +52,14 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-                <p className="text-white/80 mb-4 text-sm leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-white/20 text-white text-xs px-2 py-1 rounded-full"
+                      className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
                     >
                       {tech}
                     </span>
