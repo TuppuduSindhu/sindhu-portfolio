@@ -78,7 +78,7 @@ const Hero = () => {
                 <div className="w-full h-full bg-gradient-to-br from-purple-600 via-blue-500 to-orange-400 rounded-full p-2">
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <img
-                      src="/lovable-uploads/431279b2-3991-4ee6-9c60-4e66f12daf8b.png"
+                      src="/lovable-uploads/4ab9d703-c1af-40c1-ad59-409180cea313.png"
                       alt="Sindhu Tuppudu"
                       className="w-full h-full object-cover"
                     />
