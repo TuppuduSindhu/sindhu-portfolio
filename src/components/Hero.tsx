@@ -20,8 +20,14 @@ const Hero = () => {
             
             <div className="space-y-3">
               <p className="text-lg font-medium text-white/80 tracking-wide">Hello, I'm</p>
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
-                Sindhu Tuppudu
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent animate-pulse bg-[length:200%_200%] animate-gradient-x drop-shadow-2xl" style={{
+                  fontFamily: 'Georgia, serif',
+                  textShadow: '0 0 30px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 105, 180, 0.2)',
+                  letterSpacing: '0.02em'
+                }}>
+                  Sindhu Tuppudu
+                </span>
               </h1>
               <div className="space-y-2">
                 <p className="text-2xl lg:text-3xl font-semibold text-orange-300">
