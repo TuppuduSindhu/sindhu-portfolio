@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, Github, ExternalLink } from "lucide-react";
+import { Mail, Phone, Github, ExternalLink, Code, Trophy, BookOpen, Heart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 
@@ -19,14 +19,14 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_lv3dgup', // Your service ID
-        'template_8gzqw87', // Your template ID
+        'service_lv3dgup',
+        'template_8gzqw87',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        'XLkBZe6ccLPk2rK7m' // Your public key
+        'XLkBZe6ccLPk2rK7m'
       );
 
       toast({
@@ -63,7 +63,7 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Information */}
           <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
@@ -90,9 +90,8 @@ const Contact = () => {
                   <Phone className="text-white" size={20} />
                 </div>
                 <div>
-                  <p className="text-gray-900 font-medium">Phone</p>
+                  <p className="text-gray-900 font-medium">WhatsApp</p>
                   <p className="text-gray-600">+91-6301601086</p>
-                  <p className="text-gray-600">+91-9490341484</p>
                 </div>
               </div>
               
@@ -103,7 +102,7 @@ const Contact = () => {
                 <div>
                   <p className="text-gray-900 font-medium">GitHub</p>
                   <a 
-                    href="https://github.com/tuppudusindhu" 
+                    href="https://github.com/TuppuduSindhu" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-gray-600 hover:text-orange-500 transition-colors inline-flex items-center gap-1"
@@ -179,6 +178,101 @@ const Contact = () => {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
+          </div>
+        </div>
+
+        {/* Hobbies Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Personal Interests & Hobbies</h3>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <BookOpen className="text-white" size={24} />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Reading Books</h4>
+              <p className="text-gray-600">Exploring knowledge through literature and technical books</p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Heart className="text-white" size={24} />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Exploring New Things</h4>
+              <p className="text-gray-600">Always curious about new technologies and innovations</p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Code className="text-white" size={24} />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Coding & Web Development</h4>
+              <p className="text-gray-600">Passionate about creating digital solutions and applications</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Web Links Section */}
+        <div>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Coding Profiles</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Trophy className="text-white" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">LeetCode</h4>
+              <a 
+                href="https://leetcode.com/u/tuppudu_sindhu/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-orange-500 hover:text-orange-600 transition-colors inline-flex items-center gap-1"
+              >
+                View Profile <ExternalLink size={14} />
+              </a>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Github className="text-white" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">GitHub</h4>
+              <a 
+                href="https://github.com/TuppuduSindhu" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-orange-500 hover:text-orange-600 transition-colors inline-flex items-center gap-1"
+              >
+                View Profile <ExternalLink size={14} />
+              </a>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Code className="text-white" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">CodeChef</h4>
+              <a 
+                href="https://www.codechef.com/users/tuppudusindhu" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-orange-500 hover:text-orange-600 transition-colors inline-flex items-center gap-1"
+              >
+                View Profile <ExternalLink size={14} />
+              </a>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
+                <Trophy className="text-white" size={24} />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">HackerRank</h4>
+              <a 
+                href="https://www.hackerrank.com/profile/sindhu" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-orange-500 hover:text-orange-600 transition-colors inline-flex items-center gap-1"
+              >
+                View Profile <ExternalLink size={14} />
+              </a>
+            </div>
           </div>
         </div>
       </div>

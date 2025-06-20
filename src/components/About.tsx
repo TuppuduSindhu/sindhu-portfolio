@@ -30,9 +30,24 @@ const About = () => {
             <div className="space-y-6">
               <div className="border-l-4 border-orange-500 pl-4">
                 <h4 className="text-xl font-semibold text-gray-900">Bachelor of Technology</h4>
-                <p className="text-gray-700">Computer Science & Engineering (AI)</p>
+                <p className="text-gray-700">B.Tech. - CSE - Artificial Intelligence - PIET</p>
                 <p className="text-gray-600">Parul University</p>
+                <p className="text-gray-600">CGPA: 8.25 / 10</p>
                 <p className="text-gray-500">2022 - 2026</p>
+              </div>
+              <div className="border-l-4 border-orange-500 pl-4">
+                <h4 className="text-xl font-semibold text-gray-900">12th Grade</h4>
+                <p className="text-gray-700">TSBIE</p>
+                <p className="text-gray-600">Pranava Junior College</p>
+                <p className="text-gray-600">Percentage: 87.30 / 100</p>
+                <p className="text-gray-500">2022</p>
+              </div>
+              <div className="border-l-4 border-orange-500 pl-4">
+                <h4 className="text-xl font-semibold text-gray-900">10th Grade</h4>
+                <p className="text-gray-700">BSET</p>
+                <p className="text-gray-600">Telangana State Model School, Jangaon</p>
+                <p className="text-gray-600">CGPA: 10 / 10</p>
+                <p className="text-gray-500">2020</p>
               </div>
             </div>
           </div>
