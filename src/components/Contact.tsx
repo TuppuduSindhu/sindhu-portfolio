@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
+    <section id="contact" className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Contact Me</h2>
@@ -65,7 +65,7 @@ const Contact = () => {
         
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Information */}
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
             
             <div className="space-y-6">
@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Send Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -131,7 +131,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
+                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="Your name"
                 />
               </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
+                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -165,7 +165,7 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none disabled:opacity-50 disabled:bg-gray-100"
+                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none disabled:opacity-50 disabled:bg-gray-100"
                   placeholder="Your message..."
                 />
               </div>
@@ -187,21 +187,21 @@ const Contact = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Personal Interests & Hobbies</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <BookOpen className="text-white" size={24} />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Reading Books</h4>
               <p className="text-gray-600">Exploring knowledge through literature and technical books</p>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Heart className="text-white" size={24} />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Exploring New Things</h4>
               <p className="text-gray-600">Always curious about new technologies and innovations</p>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Code className="text-white" size={24} />
               </div>
@@ -217,7 +217,7 @@ const Contact = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Coding Profiles</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Trophy className="text-white" size={24} />
               </div>
@@ -231,7 +231,7 @@ const Contact = () => {
                 View Profile <ExternalLink size={14} />
               </a>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Github className="text-white" size={24} />
               </div>
@@ -245,7 +245,7 @@ const Contact = () => {
                 View Profile <ExternalLink size={14} />
               </a>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Code className="text-white" size={24} />
               </div>
@@ -259,7 +259,7 @@ const Contact = () => {
                 View Profile <ExternalLink size={14} />
               </a>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center border border-gray-200">
               <div className="bg-orange-500 p-3 rounded-lg w-fit mx-auto mb-4">
                 <Trophy className="text-white" size={24} />
               </div>

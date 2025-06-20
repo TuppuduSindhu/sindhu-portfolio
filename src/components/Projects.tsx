@@ -27,7 +27,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-white">
+    <section id="projects" className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Projects</h2>
@@ -48,18 +48,18 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                      className="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -70,7 +70,7 @@ const Projects = () => {
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-md"
                 >
                   <ExternalLink size={16} />
                   Live Demo
